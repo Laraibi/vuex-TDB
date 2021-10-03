@@ -1,17 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container">
+    <tdb-form></tdb-form>
+    <div class="row">
+      <div class="col-6">
+        <dash />
+      </div>
+      <div class="col-6">
+        <road-map-data></road-map-data>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import tdbForm from "./components/tdbForm.vue";
+import dash from "./components/dash.vue";
+import roadMapData from "./components/roadMapData.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    tdbForm,
+    dash,
+    roadMapData,
+  },
+  computed: {},
+  methods: {},
+};
 </script>
 
 <style>
@@ -21,6 +35,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 </style>
