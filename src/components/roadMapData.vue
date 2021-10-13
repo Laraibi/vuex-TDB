@@ -19,8 +19,8 @@
           <td>{{ parseFloat(Site.CapaHeure).toFixed(1) }}</td>
           <td>{{ Site.Abs * 100 }}%</td>
           <td>{{ Site.AbsWE }}%</td>
-          <td>{{ parseFloat(Site.Prod).toFixed(1) }}</td>
-          <td>{{ parseFloat(Site.ProdClient).toFixed(1) }}</td>
+          <td>{{ parseFloat(Site.Prod).toFixed(2) }}</td>
+          <td>{{ parseFloat(Site.ProdClient).toFixed(2) }}</td>
         </tr>
       </tbody>
     </table>
@@ -31,7 +31,7 @@
 import { mapGetters } from "vuex";
 export default {
   name: "roadMapData",
-  computed: mapGetters(["CapasData"]),
+  computed: mapGetters(["CapasData", "AbsOFDayInSite"]),
 };
 </script>
 
